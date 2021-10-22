@@ -80,7 +80,7 @@ export default function createCharacterCard(
   return createElement(
     'article',
     {
-      className: 'characterCard',
+      className: styles.characterCard,
     },
     [image, description]
   );

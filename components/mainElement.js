@@ -1,4 +1,5 @@
 import createElement from '../lib/element';
+import styles from './mainElement.module.css';
 import createCharacterCard from './characterCard';
 
 export default function createMainElement() {
@@ -9,5 +10,5 @@ export default function createMainElement() {
     'Deseased',
     '12345'
   );
-  return createElement('div', {}, [characterCard]);
+  return createElement('div', { className: styles.main }, [characterCard]);
 }

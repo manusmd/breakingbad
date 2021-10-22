@@ -3,5 +3,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
-  margin-top: 60px;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(54, 54, 54);
 }

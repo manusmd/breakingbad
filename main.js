@@ -1,5 +1,4 @@
 import './style.css';
-import createElement from './lib/element';
 import createHeaderElement from './components/headerComponent';
 import createMainElement from './components/mainElement';
 

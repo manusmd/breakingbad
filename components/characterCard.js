@@ -1,13 +1,13 @@
 import createElement from '../lib/element';
 import styles from './characterCard.module.css';
 
-export default function createCharacterCard(
+export default function createCharacterCard({
   img,
   name,
   nickname,
   status,
-  birthday
-) {
+  birthday,
+}) {
   // Content of the divs
   //Character name
   const characterNameTitle = createElement(
@@ -20,6 +20,12 @@ export default function createCharacterCard(
     { className: styles.characterDescriptionContent },
     [name]
   );
+  const characterNickname = createElement(
+    'p',
+    { className: styles.characterDescriptionContent },
+    [`Alias: ${nickname}`]
+  );
+
   //Character status
   const characterStatusTitle = createElement(
     'h2',
@@ -49,7 +55,7 @@ export default function createCharacterCard(
     {
       className: styles.characterDescriptionDiv,
     },
-    [characterNameTitle, characterName]
+    [characterNameTitle, characterName, characterNickname]
   );
   const characterStatusDiv = createElement(
     'div',
@@ -67,9 +73,11 @@ export default function createCharacterCard(
   );
 
   //Complete character card structure
+
   const image = createElement('img', {
     className: styles.characterImg,
     src: img,
+    alt: '',
   });
   const description = createElement(
     'section',

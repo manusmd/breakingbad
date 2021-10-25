@@ -1,6 +1,14 @@
 import './style.css';
+import createHeaderElement from './components/headerComponent';
+import createRandomQuote from './components/randomQuote';
+import createMainElement from './components/mainElement';
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`;
+async function renderApp() {
+  const appElement = document.querySelector('#app');
+  const headerElement = createHeaderElement();
+  const randomQuote = await createRandomQuote();
+  const mainElement = await createMainElement();
+
+  appElement.append(headerElement, randomQuote, mainElement);
+}
+renderApp();

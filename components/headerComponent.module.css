@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+  background-color: black;
+  place-content: center;
+  background-image: url('/Users/manuelschmid/dev/breakingbad/assets/headerbackground.png');
+  background-size: contain;
+  background-position: center;
+}
